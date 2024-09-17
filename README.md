@@ -5,34 +5,36 @@ We will be using Vite to create our applications. This template includes a few t
 The template has the following contents:
 
 ```
-src
-  /.github/workflows
-  /.git
-  /.gitignore
-  /node_modules
-  /src
-	package.json
-	README.md
-	yarn.lock
+/.git
+/.github/workflows
+.gitignore
+/.vscode
+biome.json
+index.html
+/node_modules
+package-lock.json
+package.json
+postcss.config.js
+/public
+README.md
+/src
+tailwind.config.js
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
 ```
+
+*Git related*
+
 **.github/workflows** stores Github Action definitions that will deploy your app when you push changes to the main branch
 
-**.vscode** configuration for VS Code so the right extensions are installed and configured correctly
-
- **.git** stores all information required to keep your project under version control (commits, pushes, repositories, etc)
+**.git** stores all information required to keep your project under version control (commits, pushes, repositories, etc)
 
 **.gitignore** pre-filled list of files that should not be included in version control
 
+*Dependencies*
+
 **node_modules** this folder stores all packages and modules installed in this application
-
-- `index.html` this is the entry point to our application. When we make a request to view the app, the response will be the `index.html` file. Note that this is a traditional HTML file, no JSX, no React - the important pieces here are:
-
-```html
-<!-- The root node to which our entire application will be appended -->
-<div id="root"></div>
-```
-
-**src** stores all of the source code in our app, including components, styling, etc
 
 **package.json** metadata about our application, including:
 
@@ -53,6 +55,20 @@ src
   - the others can be ignored
 
 **yarn.lock** (or **package-lock.json**) stores the exact dependency versions for your project. Because in our **package.json** we can be vague with versions, developers running `npm install` can get different versions, hence creating inconsistencies. The lock files solve that by being specific about what versions are installed. More info here: https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json
+
+*Configuration*
+We have added some additional modules and configuration files so that we have some consistency among projects and an overall consistent developer experience. These are not mandatory but recommended and include: TypeScript, BiomeJS, PostCSS and Tailwind.
+
+*React related*
+
+- `index.html` this is the entry point to our application. When we make a request to view the app, the response will be the `index.html` file. Note that this is a traditional HTML file, no JSX, no React - the important pieces here are:
+
+```html
+<!-- The root node to which our entire application will be appended -->
+<div id="root"></div>
+```
+
+**src** stores all of the source code in our app, including components, styling, etc
 
 ## YARN vs NPM
 - performance: yarn
