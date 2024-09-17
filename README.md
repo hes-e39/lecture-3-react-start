@@ -7,10 +7,9 @@ The template has the following contents:
 ```
 src
   /.github/workflows
-	/.git
-	/.gitignore
-	/node_modules
-	/public
+  /.git
+  /.gitignore
+  /node_modules
   /src
 	package.json
 	README.md
