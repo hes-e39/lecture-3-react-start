@@ -204,7 +204,7 @@ const Animal = () => {
 
 ### Rules for Components
 
-1. Every component should be a function that returns a renderable node (or simply return if using a functional component). This can be a string, an array, a number, a JSX expression. If you don't want to render anything, you are required to return `null` - returning `undefined` will result in an exception.
+1. Every component should be a function that returns a renderable node (or simply return if using a functional component). This can be a string, an array, a number, a JSX expression. If you don't want to render anything, you can simply return (which returns undefined) or return null. Note that this is a recent update, since in previous versions returning `undefined` would result in a runtime error.
 2. All components should use title case names. Use `MyComponent` instead of `myComponent`, `mycomponent` or `my_component`.
 3. If returning a JSX expression, it can only have a single parent:
 
